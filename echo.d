@@ -1,9 +1,10 @@
 import std.stdio;
+import std.string;
 
 int main(string[] args)
 {
-    for (int i = 1; i < args.length; i++)
-        (i < args.length - 1) ? write(args[i] ~ " ") : writeln(args[i]);
+    if (args.length > 1)
+        writeln(join(args[1..args.length], " "));
     return 0;
 }
 
