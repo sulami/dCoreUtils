@@ -8,9 +8,9 @@ int main(string[] args)
     foreach (arg; args[1..args.length]) {
         string t[] = splitLines(readText(arg));
         uint no = 0;
+        ulong ind = to!string(t.length).length;
         foreach (line; t)
-            writeln(rightJustify(to!string(++no), to!string(t.length).length)
-                    ~ " " ~ line);
+            writeln(rightJustify(to!string(++no), ind) ~ " " ~ line);
     }
     return 0;
 }
